@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@700&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Documate</title>
+	<style type="text/css">
+		body{margin: 0; font-family: 'SUIT Variable', sans-serif;}
+		header{margin: auto; width: 1366px; height: 1450px; background-color: #f4f4f4;}
+		nav{margin: 0 ;padding: 20px 110px; position: sticky; top: 0; z-index: 100; width: 1146px; height: 40px; display: flex; flex-wrap: wrap; background-color: white;}
+		ul{margin: 0; padding:0; margin-right: 81px; font-size: 16px; height: 10px; font-weight: 600; margin-top:14px;  opacity: 50%;}
+		#logo {font-size: 34px; font-family: 'Lexend Deca', sans-serif; font-weight: 700; margin-top: 0; margin-right: 120px; opacity: 100%; color: #242625;}
+		#banner {margin: auto; padding: 0; width: 1146px; height: 485px; margin-top: 20px; background: url('banner.png'); background-size: cover; border-radius: 25px; }
+		#now{width: 160px; height: 42px; background-color: #586DED; border-radius: 11px; color: white; padding: 14px; padding-top: 11px; font-size: 14px; position: relative; top: 357px; left: 48px;display: flex; flex-wrap: wrap; border-style: none; animation: big 1s cubic-bezier(.17,.67,.57,1.01) infinite;}
+			@keyframes big{50%{transform: scale( 1.1 );}}
+		.arrow {width: 15px; height: 12px; background: url(arrow.png); background-size: cover; background-position: center; margin-left: 40px; margin-top: 3px;}
+		mark {background: white; color:#ABFB02;}
+		#search {width: 238px; height: 18px; background-color: #f4f4f4; border-radius: 20px; font-size: 14px; margin: 5px 20px 0px 40px; color: #787878; padding: 10px 20px;}
+		#profile {width: 38px; height: 38px; border-radius: 50%; background: url('profile.jpg'); background-size: cover; background-position: center; margin-top: 5px;}
+		section {display: flex; flex-wrap: wrap; margin: 20px 110px 25px; position: relative; }
+		#tap1 {width: 807px; height: 816px; display: flex; flex-wrap: wrap;}
+		#tap2 
+		{width: 302px; height: 816px; margin-left: 35px;}
+		#long {width: 250px; height: 676px; background-color: white; border-radius: 25px; padding: 0px 26px;}
+		#short {width: 302px; height: 120px; background: url('scratch.png'); background-size: cover; background-position: center; border-radius: 25px; margin-top: 20px;}
+		
+		#bar1 {width: 807px; height: 310px; margin-bottom: 40px; display:flex; flex-wrap:wrap; }
+		#bar2-1{width: 393px; height:460px; margin-right: 21px;}
+		#bar2-2{width: 393px; height:460px;}
+		.title{font-family: 'SUIT Variable', sans-serif; font-weight: 600; font-size: 20px; margin-left: 10px; width: 807px; height: 40px;}
+		.forYou{width: 255px; height: 270px; margin-right: 21px; border-radius: 25px;}
+		.pic1 {background: url('pic1.png'); background-size: cover; background-position: center;}
+		.pic2 {background: url('pic2.png'); background-size: cover; background-position: center;}
+		.pic3 {background: url('pic3.png');background-size: cover; background-position: center; margin-right: 0px;}
+		.cosmos{width: 393px; height: 390px; background-color: white; border-radius: 25px; margin-top: 5px;}
+		.carl{width: 360px; height: 109px; background: url(carl.png); background-size: cover; background-position: center; margin-top: 20px; margin-left: 17px;}
+		.spoon{width: 393px; height: 400px; background: url(spoon.png); background-size: cover; background-position: center;}
+		.mini{font-size: 16px; padding-top: 25px; margin-left:0px; width: 290px; }
+		.top5{width: 258px; height: 257px; background: url(top5.png); background-size: cover; background-position: center;}
+		.quiz{width: 250px; height: 250px;}
+		#night{width: 393px; height: 245px; border-radius: 25px 25px 0px 0px;}
+		video {width: 100%; border-radius: 25px 25px 0px 0px;}
+		.blue {color: #586DED; font-family: 'SUIT Variable', sans-serif; font-weight: 600; }
+		.violet{width: 250px; height: 25px; color: #C0B6FF; font-family: 'SUIT Variable', sans-serif; font-weight: 600; font-size: 14px; text-align: center; margin-left: 0px; padding-top:10px; }
+		.question{width: 250px;  font-family: 'SUIT Variable', sans-serif;font-weight: 600; font-size: 14px; text-align: center; margin-left: 0; margin-bottom: 40px;}
+		.line {background-color: #f4f4f4; width: 302px; height: 1px; margin-left: -26px; margin-top: 22px;}
+		.answer {width: 250px; height: 34px; margin-bottom: 6px; border-radius: 50px; text-align: center; padding-top: 14px; border: #242625 1px solid;} 
+		.underBar {position: absolute; top: 79px; left: 402px; width: 42px; height: 2px; background-color: #586DED; border-radius: 1px;}
+		.opa100 {opacity: 100%}
+		a {text-decoration: none; color: white;}
+		#o{width: 36px; height: 36px;  position: absolute; top: 533px; left:976px; z-index: 10; background-image: url(o.png); background-size: 80%; opacity: 0;  display: none; background-position: center; background-repeat: no-repeat;}
+		#xx{width: 36px; height: 36px; position: absolute; top: 588px; left:976px; z-index: 10; background-image: url(xx.png); background-size: cover; opacity: 0; display:none; background-repeat: no-repeat;}
+
+		@keyframes colorO {
+			0%{background-color: #ffffff; color: #242625;}
+			10%{background-color: #586DED; color: #586DED;}
+			90%{background-color: #586DED; color: #586DED;}
+			100%{background-color: #ffffff; color: #242625;}
+		}
+
+		@keyframes colorX {
+			0%{background-color: #ffffff; color: #242625;}
+			10%{background-color: #FF8761; color: #FF8761;}
+			90%{background-color: #FF8761; color: #FF8761;}
+			100%{background-color: #ffffff; color: #242625;}
+		}
+
+		@keyframes opa {
+			0%{opacity: 0;}
+			10%{opacity: 1;}
+			90%{opacity: 1;}
+			100%{opacity: 0;}
+		}
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul id="logo"><mark>Docu</mark>mate.</ul>
+			<ul class="opa100">홈</ul>
+			<ul>학습</ul>
+			<ul>커뮤니티</ul>
+			<ul>보관함</ul>
+			<div id="search"> 컨텐츠를 검색해보세요.</div>
+			<div id="profile"></div>
+			<div class="underBar"></div>
+		</nav>
+		<div id="banner">
+			<a href="index2.html" target="_blank"><button id="now">지금 시청하기
+				<div class="arrow"></div>
+			</button></a>
+			
+		</div>
+		<section>
+			<div id="tap1">
+				<div id="bar1">
+					<div class="title">당신을 위한 추천</div>
+					<div class="forYou pic1"></div>
+					<div class="forYou pic2"></div>
+					<div class="forYou pic3"></div>
+				</div>
+				<div id="bar2-1">
+					<div class="title">오늘의 명장면</div>
+					<div class="cosmos">
+						<div id="night"><video src="night.mov" autoplay loop muted></video></div>
+						<div class="carl"></div>
+					</div>
+					
+				</div>
+				<div id="bar2-2">
+					<div class="title">지식 한 스푼</div>
+					<div class="spoon"></div>
+				</div>
+			</div>
+			<div id="tap2">
+				<div id="long">
+					<div class="title mini">다큐메이트 <mark class="blue">TOP 5</mark></div>
+					<div class="top5"></div>
+					<div class="line"></div>
+					<div class="title mini">복습퀴즈</div>
+					<div class="quiz">
+						<div class="title violet"> 우리의 지구 시즌 1 3화 중에서</div>
+						<div class="title question">북극의 여름철에 해가 지지 않는 현상을<br>뭐라고 할까요?</div>
+						<div id="o"></div>
+						<div id="xx"></div>
+						<div class="answer" id="a1">백야</div>
+						<div class="answer" id="a2">극야</div>
+					</div>
+				</div>
+				<div id="short"></div>
+			</div>
+			
+		</section>
+	</header>
+
+	<script type="text/javascript">
+
+
+		short.onclick = function(){
+			if(short){
+				this.style.backgroundImage = "url(result.png)";
+			short = false;
+
+			}
+			else if(!short){
+				this.style.backgroundImage = "url(scratch.png)";
+				short = true;
+			}
+		}
+
+		a1.onclick = function(){
+			a1.style.animationPlayState = "running";
+			o.style.display = "block";
+			o.style.animation = "opa 1s";
+			a1.style.animation = "colorO 1s";
+		}
+
+		a1.onanimationend = function(){
+			this.style.animation = "none";
+		}
+
+		a2.onanimationend = function(){
+			this.style.animation = "none";
+		}
+
+
+			a2.onclick = function(){
+			a2.style.animationPlayState = "running";
+			xx.style.display = "block";
+			xx.style.animation = "opa 1s";
+			a2.style.animation = "colorX 1s";
+		}
+
+		o.onanimationend = function(){
+			o.style.display = "none";
+			a1.style.animationPlayState = "paused";
+		}
+
+		xx.onanimationend = function(){
+			xx.style.display = "none";
+			a2.style.animationPlayState = "paused";
+		}
+	</script>
+</body>
+</html>

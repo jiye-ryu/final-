@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@700&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>퀴즈</title>
+	<style type="text/css">
+		body {margin: 0; font-family: 'SUIT Variable', sans-serif;
+		}
+		section {width: 1366px; height: 945px; margin: auto; background-color: #f4f4f4;}
+		.space1{width: 1260px; height: 350px; margin: auto;  position: absolute; top: 60%; left: 50%; transform: translate(-50%,0%);}
+		.answer{width: 1000px; height: 40px; background-color: white; border-radius: 50px; margin-top: 10px; padding-top: 20px; text-align: center; border-style: solid; z-index: 5; border-width: 1px;}
+		#proBar {width: 1250px; height: 50px; margin: auto; display: flex; flex-wrap: wrap;}
+		#stick {width: 1180px; height: 10px; background-color: lightgray; border-radius: 5px; }
+		#prog {width: 885px; height: 10px; border-radius: 50px; margin: 0; padding: 0; background-color: #586DED;}
+		#ok{ height: 40px; background-color: #242625; margin: auto; border-radius: 50px; border-style: none; position: absolute; top: 60%; left: 50%; transform: translate(-50%,0%); text-align: center; color: white; padding-top: 20px;} 
+		div {margin: auto; text-align: center;}
+		#t1 {color: #586DED; font-size: 16px; font-weight: 700; margin-top: 60px;}
+		#t2 {font-size: 24px; margin-top: 10px; font-weight: 600; line-height: 1.3;}
+		#t3 {width: 480px; height: 300px; border-radius: 20px; margin-top: 30px; background-image: url(q3.jpg); background-size: cover;}
+		#page {text-align: left; margin-left: 0;}
+		#info {width: 1366px; height: 215px; z-index: 10; background-color: white; transform: translate(0%,-100%); position: absolute; top: 945px; display: flex; flex-wrap: wrap; display:none; }
+		#yon { text-align: left; font-size: 28px; font-weight: 600; margin: 0; padding: 0; margin-left: 10px;}
+		#why {text-align: left; font-size: 20px; margin-left: 65px; font-weight: 400; margin-top: 20px;}
+		#img1 {width: 30px; height: 30px; margin: 0; padding: 0; background-size: cover; background-position: center;}
+		.info1 {width: 1240px; margin: 0; padding: 0; margin-left: 65px; margin-top: 22px; display: flex; flex-wrap: wrap;}
+		#bbb {width: 1366px; height: 945px; background-color: black; opacity: 25%; position: absolute; z-index: 8; top: 0; left: 0; display: none;}
+		a {text-decoration: none; color: white;}
+		#x {width: 26px; height: 26px; background-image: url(close.png); background-size: cover;}
+		#bg {width: 1366px; height: 945px; margin:auto; background-color:black; opacity:60%; position:absolute; z-index:9;top: 0; left: 0; display:none; }
+		#pop{width: 380px; height: 520px; z-index: 10; position: absolute; transform: translate(-50%,-50%); top: 50%; left: 50%; background-color: #f4f4f4; margin: 0; border-radius: 30px; display: none;}
+		#sadDo{background-image: url(sad.png); background-size: cover; width: 320px; height: 200px; background-position: center; position: relative; top: 55px;}
+		#text1{text-align: center; position:relative; top:85px; font-weight: 700; font-size: 18px;}
+		#notC{width: 340px; height: 60px; background-color: #c7FF24; color: #242625; text-align: center; border-radius: 40px; position: relative; top: 120px; border-style: none; font-size: 16px;}
+		#back{width: 340px; height: 60px; background-color: #242625; color: white; text-align: center; border-radius: 40px; position: relative; top: 135px; border-style: none; font-size: 16px;}
+
+
+	</style>
+</head>
+<body>
+	<section>
+		<div id="bg"></div>
+		<div id="pop"><div id="sadDo"></div><div id="text1">퀴즈를 정말 중단하시겠어요?<br> 풀었던 문제들은 모두 사라져요. </div>
+		<button id="notC">이어서 풀기</button>
+		<a href="index.html"><button id="back">홈으로 돌아가기</button></a></div>
+		<div id="proBar">
+			<div id="page">3/4</div>
+			<div id="stick"><div id="prog"></div></div>
+			<div id="x"></div>
+		</div>
+		<div id="question">
+			<div id="t1">배경지식 기억하기</div>
+			<div id="t2">소설에서는 느낌표가 줄어든 반면 이 매체에서는 느낌표가 많이 사용되기 시작했는데요,<br> 사람들의 관심을 끌기 위해 느낌표를 적극적으로 활용한 이 매체는 무엇일까요?</div>
+			<div id="t3"></div>
+		</div>
+		<div class="space1">
+		<div class="answer" id="a1">시</div>
+		<div class="answer" id="a2">광고</div>
+		<div class="answer" id="a3">설명서</div>
+		<div class="answer" id="a4">표지판</div>
+		</div>
+		<div id="bbb"></div>
+		<div id="info">
+			<div class="info1">
+			<div id="img1"></div>
+			<div id="yon">맞았어요</div>
+			</div>
+			<div id="why">1930년대부터 1950년대까지 느낌표를 사용한 지면 광고가 두 배로 늘어났습니다.</div>
+			<a href="index7.html"><div class="answer" id="ok">다음</div></a>
+	</section>
+
+ 	<script>
+
+ 	let score3 = localStorage.getItem("score2");
+ 	let score2 = localStorage.getItem("score2");
+ 	console.log(score3);
+ 
+
+ 	a2.onclick = function(){
+ 		this.style.backgroundColor = "#242625";
+ 		this.style.color = "white";
+ 		info.style.display = "block";
+ 		bbb.style.display = "block";
+ 				document.getElementById("yon").innerHTML = "맞았어요!";
+ 				yon.style.color = "#586DED";
+ 				document.getElementById("img1").style.backgroundImage = "url(yes.png)";
+ 				document.getElementById("why").innerHTML = "정답은 '광고'에요. 소비자의 관심을 끌어 물건을 팔기 위해 느낌표를 적극적으로 사용하기 시작했답니다.";
+ 				document.getElementById("ok").style.backgroundColor = "#586DED";
+ 				
+ 				score3++;
+ 				localStorage.setItem("score3",score3);
+ 				console.log(score3);
+
+
+ 				
+ 				
+ 	}
+ 	
+ 	let wrongA = [a1,a3,a4];
+
+ 	for(var i=0; i<3; i++){
+ 		wrongA[i].onclick = function(){
+ 			this.style.backgroundColor = "#242625";
+ 			this.style.color = "white";
+ 				info.style.display = "block";
+ 				bbb.style.display = "block";
+ 				document.getElementById("yon").innerHTML = "틀렸어요!";
+ 				yon.style.color = "#FF8761";
+ 				document.getElementById("img1").style.backgroundImage = "url(no.png)";
+ 				document.getElementById("why").innerHTML = "정답은 '광고'에요. 소비자의 관심을 끌어 물건을 팔기 위해 느낌표를 적극적으로 사용하기 시작했답니다.";
+ 				document.getElementById("ok").style.backgroundColor = "#FF8761";
+ 				localStorage.setItem("score3",score2);
+ 				console.log(score3);
+ 			
+
+ 			}
+ 			
+ 		
+ 	}
+
+ 	bbb.onclick = function(){
+ 		this.style.display = "none";
+ 		info.style.display = "none";
+ 		location.reload();
+ 	}
+ 	x.onclick = function(){
+ 		bg.style.display = "block";
+ 		pop.style.display = "block";
+
+ 	}
+
+ 	notC.onclick = function(){
+ 		location.reload();
+ 	}
+
+
+
+ 	</script>
+</body>
+</html>

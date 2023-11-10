@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@700&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>익스플레인 : 세계를 해설하다</title>
+	<style type="text/css">
+		body {margin: 0; font-family: 'SUIT Variable', sans-serif;}
+		section {width:1366px; height: 945px; margin: auto; background-color: #000000;}
+		#youtube {width: 1366px; height: 945px; z-index: 1}
+		#ifMute {width: 300px; height: 40px; background-color: #242625; opacity: 75%; position: absolute; transform: translate(-50%,-50%); top: 50%; left: 50%; text-align: center; padding-top: 16px; border-radius:15px; color:white; animation: opa 5s forwards; line-height: 1.6; letter-spacing: 1.5;}
+		#goQuiz{width: 380px; height: 520px; z-index: 5; position: absolute; transform: translate(-50%,-50%); top: 50%; left: 50%; background-color: #f4f4f4; margin: 0; border-radius: 30px; display: none;}
+		#opacity {width: 1366px; height: 945px; position: absolute; margin: 0; background-color: black; opacity: 65%; top: 0; display: none;}
+		#start {width: 340px; height: 60px; background-color: #242625; color: white; text-align: center; border-radius: 40px; position: relative; top: 4px; left: 20px; border-style: none; font-size: 16px;}
+		#text1 {text-align: center; position:relative;top:-10px; font-weight: 700; font-size: 18px;}
+		#img1 {background-image: url(documate1.png); background-size: cover; width: 300px; height: 350px; background-position: center; position: relative; transform: translate(-50%,0%); left: 50%; margin-top: -10px;}
+		#closee {width: 30px; height: 30px; background-image: url(close.png); background-size: cover; background-position: center; position: relative; left: 330px; top: 15px;}
+		@keyframes opa {
+			0%{opacity: 0;}
+			15%{opacity: 0.8;}
+			85%{opacity: 0.8;}
+			100%{opacity: 0;}
+		}
+		#flo {width: 1366px; height: 100px; position: absolute; display: flex; flex: flex-wrap; opacity: 0%;}
+		#flo1 {width: 152px; height: 59px; position: relative; left: 1125px;top: 17px; background-image: url(gogogo.png); background-size: cover; background-position: center;}
+		#flo2 {width: 58px; height: 58px; position: relative; left: 1132px; top: 15px;background-image: url(close2.png); background-size: cover; background-position: center;}
+
+
+	</style>
+</head>
+<body>
+	<section>
+		<div id="flo">
+			<a href="index4.html" target="_new"> <div id="flo1"></div></a>
+			<div id="flo2"></div>
+		</div>
+		<iframe id="youtube" width="1366" height="945" src="https://www.youtube.com/embed/W-9vb_-qzaQ?autoplay=1&mute=1&controls=1&rel=0&vq=highres&si=fY1ee-VTEZ-tGxA4&amp;start=368&end=584" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<div id="ifMute">헤드폰 착용 후, 음소거를 해제해주세요!</div>
+		<div id="goQuiz">
+			<div id="closee"></div>
+			<div id="img1"></div>
+			<div id="text1">익스플레인 : 세계를 해설하다 <br>재밌게 보셨나요?<br>퀴즈를 통해 학습해봐요!</div>
+			<a href="index4.html" target="_new"><button id="start">퀴즈 시작하기</button></a>
+		</div>
+		<div id="opacity"></div>
+	</section>
+<script type="text/javascript">
+	var vid = document.getElementById("youtube");
+	var timer = setInterval(getTime,1000);
+	var t = 0;
+	
+	function getTime(){
+		t++;
+		if(t == 12){
+			flo.style.opacity= "60%";
+		}
+
+		if(t == 483){
+			var popup = document.getElementById("goQuiz");
+			popup.style.display = "block";
+			var opacity = document.getElementById("opacity");
+			opacity.style.display = "block";
+				}
+		}
+	getTime();
+	closee.onclick = function(){
+		var popup = document.getElementById("goQuiz");
+		popup.style.display = "none";
+		var opacity = document.getElementById("opacity");
+		opacity.style.display = "none";
+	};
+
+	flo2.onclick = function(){
+		window.close();
+	};
+
+	
+
+	
+</script>
+</body>
+</html>
